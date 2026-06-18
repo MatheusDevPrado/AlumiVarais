@@ -8,7 +8,8 @@
   --ink: #071a36;
   --muted: #526173;
   --line: #d9e3ef;
-  --bg: #f6f9fc;
+  --bg: #F6F9FC;
+  --menu-bg: #F6F9FC;
   --white: #ffffff;
   --shadow: 0 18px 44px rgba(7, 26, 54, 0.12);
   --radius: 16px;
@@ -47,7 +48,7 @@ textarea {
 .site-header {
   min-height: 112px;
   padding: 14px clamp(18px, 5vw, 72px);
-  background: #F6F9FC;
+  background: var(--menu-bg);
   color: var(--navy);
   display: flex;
   align-items: center;
@@ -127,7 +128,7 @@ textarea {
   height: 46px;
   border: 1px solid rgba(7, 26, 54, 0.14);
   border-radius: 12px;
-  background: #ffffff;
+  background: var(--menu-bg);
   padding: 10px;
 }
 
@@ -700,7 +701,7 @@ footer {
     display: none;
     width: 100%;
     align-items: stretch;
-    background: #F6F9FC;
+    background: var(--menu-bg);
     border: 1px solid var(--line);
     border-radius: 14px;
     padding: 12px;
