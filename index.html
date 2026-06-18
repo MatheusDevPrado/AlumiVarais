@@ -9,7 +9,7 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#inicio" aria-label="AlumiVarais">
-        <img src="assets/logo-alumivarais.jpeg" alt="Alumi Varais Solucoes Sob Medida" />
+        <img src="assets/logo-alumivarais.png" alt="Alumi Varais Solucoes Sob Medida" />
       </a>
       <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
@@ -146,6 +146,13 @@
         </div>
         <div class="gallery-grid">
           <article>
+            <img class="logo-gallery" src="assets/logo-alumivarais.png" alt="Logo Alumi Varais Solucoes Sob Medida" />
+            <div>
+              <h3>Alumi Varais</h3>
+              <p>Solucoes sob medida para valorizar o ambiente com funcionalidade, beleza e seguranca.</p>
+            </div>
+          </article>
+          <article>
             <img src="assets/varal-sob-medida-02.jpeg" alt="Varal sob medida instalado em lavanderia" />
             <div>
               <h3>Varal sob medida</h3>
@@ -192,30 +199,60 @@
 
       <section class="clients" id="clientes">
         <div class="section-title light">
-          <h2>Clientes que vivem a diferenca</h2>
-          <p>Preencha somente com depoimentos reais. Se ainda nao tiver, deixe em branco ate coletar autorizacao do cliente.</p>
+          <h2>Depoimentos reais</h2>
+          <p>Template para preencher apenas com clientes reais: foto, nota, nome ou empresa e descricao autorizada.</p>
         </div>
         <div class="testimonial-grid">
           <article class="testimonial-card">
-            <input class="image-input" type="file" accept="image/*" aria-label="Adicionar foto real do cliente" />
-            <div class="avatar-preview">Foto real</div>
-            <input data-save="client-1-name" placeholder="Nome real do cliente" aria-label="Nome do cliente" />
-            <input data-save="client-1-location" placeholder="Bairro ou cidade real" aria-label="Local do cliente" />
-            <textarea data-save="client-1-text" placeholder="Depoimento real autorizado pelo cliente"></textarea>
+            <label class="testimonial-photo">
+              <input class="image-input" type="file" accept="image/*" aria-label="Adicionar foto real do cliente" />
+              <span class="avatar-preview">Foto do cliente</span>
+            </label>
+            <select data-save="client-1-stars" aria-label="Nota do cliente">
+              <option value="">Nota dada pelo cliente</option>
+              <option value="5">5 estrelas</option>
+              <option value="4">4 estrelas</option>
+              <option value="3">3 estrelas</option>
+              <option value="2">2 estrelas</option>
+              <option value="1">1 estrela</option>
+            </select>
+            <div class="star-preview" aria-hidden="true">*****</div>
+            <input data-save="client-1-name" placeholder="Nome da pessoa ou empresa" aria-label="Nome do cliente ou empresa" />
+            <textarea data-save="client-1-text" placeholder="Descricao do depoimento real autorizado pelo cliente"></textarea>
           </article>
           <article class="testimonial-card">
-            <input class="image-input" type="file" accept="image/*" aria-label="Adicionar foto real do cliente" />
-            <div class="avatar-preview">Foto real</div>
-            <input data-save="client-2-name" placeholder="Nome real do cliente" aria-label="Nome do cliente" />
-            <input data-save="client-2-location" placeholder="Bairro ou cidade real" aria-label="Local do cliente" />
-            <textarea data-save="client-2-text" placeholder="Depoimento real autorizado pelo cliente"></textarea>
+            <label class="testimonial-photo">
+              <input class="image-input" type="file" accept="image/*" aria-label="Adicionar foto real do cliente" />
+              <span class="avatar-preview">Foto do cliente</span>
+            </label>
+            <select data-save="client-2-stars" aria-label="Nota do cliente">
+              <option value="">Nota dada pelo cliente</option>
+              <option value="5">5 estrelas</option>
+              <option value="4">4 estrelas</option>
+              <option value="3">3 estrelas</option>
+              <option value="2">2 estrelas</option>
+              <option value="1">1 estrela</option>
+            </select>
+            <div class="star-preview" aria-hidden="true">*****</div>
+            <input data-save="client-2-name" placeholder="Nome da pessoa ou empresa" aria-label="Nome do cliente ou empresa" />
+            <textarea data-save="client-2-text" placeholder="Descricao do depoimento real autorizado pelo cliente"></textarea>
           </article>
           <article class="testimonial-card">
-            <input class="image-input" type="file" accept="image/*" aria-label="Adicionar foto real do cliente" />
-            <div class="avatar-preview">Foto real</div>
-            <input data-save="client-3-name" placeholder="Nome real do cliente" aria-label="Nome do cliente" />
-            <input data-save="client-3-location" placeholder="Bairro ou cidade real" aria-label="Local do cliente" />
-            <textarea data-save="client-3-text" placeholder="Depoimento real autorizado pelo cliente"></textarea>
+            <label class="testimonial-photo">
+              <input class="image-input" type="file" accept="image/*" aria-label="Adicionar foto real do cliente" />
+              <span class="avatar-preview">Foto do cliente</span>
+            </label>
+            <select data-save="client-3-stars" aria-label="Nota do cliente">
+              <option value="">Nota dada pelo cliente</option>
+              <option value="5">5 estrelas</option>
+              <option value="4">4 estrelas</option>
+              <option value="3">3 estrelas</option>
+              <option value="2">2 estrelas</option>
+              <option value="1">1 estrela</option>
+            </select>
+            <div class="star-preview" aria-hidden="true">*****</div>
+            <input data-save="client-3-name" placeholder="Nome da pessoa ou empresa" aria-label="Nome do cliente ou empresa" />
+            <textarea data-save="client-3-text" placeholder="Descricao do depoimento real autorizado pelo cliente"></textarea>
           </article>
         </div>
       </section>
@@ -250,6 +287,7 @@
             <span>Regiao atendida</span>
             <strong>Sao Bernardo do Campo e ABC</strong>
             <p>Santo Andre, Sao Caetano, Diadema, Maua e cidades proximas mediante disponibilidade.</p>
+            <p><b>Horario:</b> Seg a Sab - 8h as 19h</p>
             <a class="primary-action" href="https://wa.me/5511940034359?text=Ola%2C%20quero%20confirmar%20atendimento%20na%20minha%20regiao" target="_blank" rel="noreferrer">Confirmar atendimento</a>
           </aside>
         </div>
@@ -260,6 +298,7 @@
           <span>Onde atendemos</span>
           <strong>Sao Bernardo do Campo e ABC</strong>
           <p>Santo Andre, Sao Caetano, Diadema, Maua e regiao. Ajuste conforme atendimento real.</p>
+          <p><b>Horario:</b> Seg a Sab - 8h as 19h</p>
         </div>
         <div>
           <span>Fale direto</span>

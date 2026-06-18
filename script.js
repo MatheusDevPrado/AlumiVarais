@@ -23,8 +23,14 @@ editableFields.forEach((field) => {
   if (saved) {
     field.value = saved;
   }
+  updateStarPreview(field);
   field.addEventListener("input", () => {
     localStorage.setItem(key, field.value);
+    updateStarPreview(field);
+  });
+  field.addEventListener("change", () => {
+    localStorage.setItem(key, field.value);
+    updateStarPreview(field);
   });
 });
 
@@ -62,4 +68,17 @@ imageInputs.forEach((input, index) => {
 function setPreview(preview, imageUrl) {
   preview.style.backgroundImage = `url("${imageUrl}")`;
   preview.classList.add("has-image");
+}
+
+function updateStarPreview(field) {
+  if (!field.dataset.save || !field.dataset.save.includes("stars")) {
+    return;
+  }
+  const preview = field.parentElement.querySelector(".star-preview");
+  if (!preview) {
+    return;
+  }
+  const rating = Number(field.value || 0);
+  preview.textContent = rating ? "*".repeat(rating) : "*****";
+  preview.style.opacity = rating ? "1" : "0.34";
 }
