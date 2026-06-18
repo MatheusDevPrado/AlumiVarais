@@ -68,7 +68,7 @@ textarea {
 }
 
 .brand img {
-  width: clamp(270px, 27vw, 340px);
+  width: 270px;
   height: 100px;
   border-radius: 8px;
   object-fit: contain;
