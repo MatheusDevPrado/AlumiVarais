@@ -47,7 +47,7 @@ textarea {
 .site-header {
   min-height: 112px;
   padding: 14px clamp(18px, 5vw, 72px);
-  background: #f6f9fc;
+  background: #F6F9FC;
   color: var(--navy);
   display: flex;
   align-items: center;
@@ -493,10 +493,11 @@ h1 {
 }
 
 .testimonial-photo .image-input {
-  max-width: 220px;
-  border-color: rgba(6, 25, 53, 0.16);
-  background: #f5f9fe;
-  font-size: 0.82rem;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .avatar-preview {
@@ -699,7 +700,7 @@ footer {
     display: none;
     width: 100%;
     align-items: stretch;
-    background: #ffffff;
+    background: #F6F9FC;
     border: 1px solid var(--line);
     border-radius: 14px;
     padding: 12px;
