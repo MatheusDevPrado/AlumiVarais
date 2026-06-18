@@ -45,17 +45,17 @@ textarea {
 }
 
 .site-header {
-  min-height: 82px;
-  padding: 18px clamp(18px, 5vw, 72px);
-  background: linear-gradient(135deg, #061935 0%, #071e3f 70%, #0b3154 100%);
-  color: var(--white);
+  min-height: 112px;
+  padding: 14px clamp(18px, 5vw, 72px);
+  background: #f6f9fc;
+  color: var(--navy);
   display: flex;
   align-items: center;
   gap: 28px;
   position: sticky;
   top: 0;
   z-index: 30;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 12px 28px rgba(7, 26, 54, 0.08);
 }
 
 .brand {
@@ -68,8 +68,8 @@ textarea {
 }
 
 .brand img {
-  width: clamp(128px, 14vw, 188px);
-  height: 58px;
+  width: clamp(230px, 23vw, 340px);
+  height: 96px;
   border-radius: 8px;
   object-fit: contain;
   background: transparent;
@@ -85,14 +85,14 @@ textarea {
 
 .main-nav a,
 .phone-link {
-  color: #edf7ff;
+  color: var(--navy);
   text-decoration: none;
   font-weight: 700;
 }
 
 .main-nav a:hover,
 .phone-link:hover {
-  color: var(--cyan);
+  color: #0aa68e;
 }
 
 .whatsapp-button,
@@ -125,16 +125,16 @@ textarea {
   display: none;
   width: 46px;
   height: 46px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(7, 26, 54, 0.14);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #ffffff;
   padding: 10px;
 }
 
 .menu-button span {
   width: 100%;
   height: 2px;
-  background: var(--white);
+  background: var(--navy);
   border-radius: 999px;
   display: block;
   margin: 5px 0;
@@ -681,14 +681,14 @@ footer {
 
 @media (max-width: 760px) {
   .site-header {
-    min-height: 72px;
-    padding: 14px 18px;
+    min-height: 104px;
+    padding: 12px 18px;
     gap: 12px;
   }
 
   .brand img {
-    width: min(150px, 50vw);
-    height: 52px;
+    width: min(238px, 66vw);
+    height: 86px;
   }
 
   .menu-button {
@@ -699,7 +699,8 @@ footer {
     display: none;
     width: 100%;
     align-items: stretch;
-    background: rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid var(--line);
     border-radius: 14px;
     padding: 12px;
   }
