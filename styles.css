@@ -416,14 +416,6 @@ h1 {
   background: #eef3f8;
 }
 
-.gallery-grid img.logo-gallery {
-  object-fit: contain;
-  padding: 38px;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(20, 199, 183, 0.12), transparent 38%),
-    linear-gradient(135deg, #ffffff, #eef6ff);
-}
-
 .gallery-grid div {
   padding: 20px;
 }
