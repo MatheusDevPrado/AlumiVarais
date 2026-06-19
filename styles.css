@@ -52,7 +52,7 @@ textarea {
   color: var(--navy);
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(14px, 1.6vw, 28px);
   position: sticky;
   top: 0;
   z-index: 30;
@@ -65,6 +65,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   margin-right: auto;
+  flex: 0 0 auto;
   min-width: 0;
 }
 
@@ -81,7 +82,10 @@ textarea {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: clamp(12px, 1.25vw, 22px);
+  min-width: 0;
 }
 
 .main-nav a,
@@ -89,6 +93,7 @@ textarea {
   color: var(--navy);
   text-decoration: none;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .main-nav a:hover,
@@ -115,6 +120,12 @@ textarea {
   color: var(--white);
   background: linear-gradient(135deg, #11d4c4, #0aa68e);
   box-shadow: 0 12px 28px rgba(20, 199, 183, 0.28);
+}
+
+.whatsapp-button {
+  flex: 0 0 auto;
+  max-width: 260px;
+  text-align: left;
 }
 
 .secondary-action {
@@ -542,17 +553,60 @@ footer {
   color: #d8e9ff;
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1320px) {
+  .site-header {
+    padding-inline: 32px;
+  }
+
+  .brand img {
+    width: 220px;
+    height: 86px;
+  }
+
+  .phone-link {
+    display: none;
+  }
+
+  .whatsapp-button {
+    max-width: 220px;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  }
+}
+
+@media (max-width: 1180px) {
   .site-header {
     flex-wrap: wrap;
   }
 
-  .main-nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
+  .menu-button {
+    display: block;
+    margin-left: auto;
   }
 
+  .main-nav {
+    display: none;
+    order: 4;
+    width: 100%;
+    align-items: stretch;
+    background: var(--menu-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px;
+  }
+
+  body.menu-open .main-nav {
+    display: grid;
+  }
+
+  .whatsapp-button {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1060px) {
   .hero,
   .map-card,
   .contact {
@@ -575,41 +629,42 @@ footer {
 
 @media (max-width: 760px) {
   .site-header {
-    min-height: 104px;
-    padding: 12px 18px;
+    min-height: 84px;
+    padding: 10px 16px;
     gap: 12px;
   }
 
   .brand img {
-    width: min(238px, 66vw);
-    height: 86px;
+    width: min(188px, 56vw);
+    height: 66px;
   }
 
   .menu-button {
-    display: block;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
   }
 
   .main-nav {
-    display: none;
-    width: 100%;
-    align-items: stretch;
-    background: var(--menu-bg);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 12px;
+    order: 3;
   }
 
-  body.menu-open .main-nav {
-    display: grid;
-  }
-
-  .phone-link {
-    display: none;
+  .main-nav a {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
   }
 
   .whatsapp-button {
     width: 100%;
+    max-width: none;
+    min-height: 46px;
     order: 4;
+  }
+
+  h1 {
+    font-size: clamp(2.15rem, 11vw, 3.1rem);
+    line-height: 1.05;
   }
 
   .hero {
@@ -617,7 +672,23 @@ footer {
   }
 
   .hero-copy {
-    padding: 34px 18px;
+    padding: 34px 18px 24px;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-image-card {
+    padding: 0 18px 28px;
+  }
+
+  .hero-preview {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+    background-position: center;
   }
 
   .hero-stats,
@@ -631,6 +702,7 @@ footer {
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+    margin-bottom: 22px;
   }
 
   .primary-action,
@@ -639,7 +711,8 @@ footer {
   }
 
   .model-card .image-preview {
-    min-height: 250px;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
   }
 
   .gallery-grid img {
@@ -649,5 +722,32 @@ footer {
 
   .model-content {
     min-height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding-inline: 12px;
+  }
+
+  .brand img {
+    width: min(164px, 54vw);
+    height: 58px;
+  }
+
+  h1 {
+    font-size: clamp(1.95rem, 10vw, 2.5rem);
+  }
+
+  .features,
+  .models,
+  .gallery,
+  .faq,
+  .map-section {
+    padding-inline: 14px;
+  }
+
+  .contact {
+    margin-inline: 14px;
   }
 }
