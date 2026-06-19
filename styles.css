@@ -229,16 +229,6 @@ h1 {
   min-width: 0;
 }
 
-.image-input {
-  width: 100%;
-  border: 1px dashed rgba(20, 199, 183, 0.65);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.86);
-  color: var(--ink);
-  padding: 10px;
-  cursor: pointer;
-}
-
 .image-preview {
   min-height: 210px;
   border-radius: 16px;
@@ -260,8 +250,7 @@ h1 {
   background-position: center;
 }
 
-.image-preview.has-image,
-.avatar-preview.has-image {
+.image-preview.has-image {
   background-size: cover;
   background-position: center;
   color: transparent;
@@ -307,8 +296,7 @@ h1 {
 
 .feature-grid article,
 .model-card,
-.faq details,
-.testimonial-card {
+.faq details {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
@@ -383,17 +371,6 @@ h1 {
   align-content: start;
 }
 
-.testimonial-card input,
-.testimonial-card textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #f8fbff;
-  color: var(--ink);
-  padding: 10px 12px;
-  text-align: center;
-}
-
 .model-content h3 {
   margin: 0;
   color: var(--navy);
@@ -459,93 +436,6 @@ h1 {
 .gallery-grid p {
   color: var(--muted);
   line-height: 1.55;
-}
-
-.clients {
-  padding: 30px clamp(18px, 5vw, 72px);
-  background: linear-gradient(135deg, var(--navy) 0%, #092b58 100%);
-  color: var(--white);
-}
-
-.section-title.light p {
-  color: #d8e9ff;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.98);
-  border-color: rgba(255, 255, 255, 0.25);
-  padding: 22px;
-  display: grid;
-  gap: 12px;
-  color: var(--ink);
-}
-
-.testimonial-photo {
-  display: grid;
-  justify-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.testimonial-photo .image-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.avatar-preview {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 4px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f6fbff, #e7f1fb);
-  border: 2px solid rgba(20, 199, 183, 0.38);
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  font-weight: 800;
-  font-size: 0.78rem;
-  text-align: center;
-  overflow: hidden;
-}
-
-.testimonial-card select,
-.testimonial-card input,
-.testimonial-card textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #f8fbff;
-  color: var(--ink);
-  padding: 11px 12px;
-  text-align: center;
-}
-
-.testimonial-card input {
-  font-weight: 900;
-}
-
-.testimonial-card textarea {
-  min-height: 110px;
-  text-align: left;
-  line-height: 1.5;
-}
-
-.star-preview {
-  min-height: 26px;
-  color: #f7b500;
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-align: center;
-  letter-spacing: 0.08em;
 }
 
 .faq-grid {
@@ -732,7 +622,6 @@ footer {
   .feature-grid,
   .model-grid,
   .gallery-grid,
-  .testimonial-grid,
   .faq-grid {
     grid-template-columns: 1fr;
   }
