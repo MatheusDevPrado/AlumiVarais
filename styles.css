@@ -525,6 +525,16 @@ h1 {
   margin-bottom: 0;
 }
 
+.instagram-link {
+  color: var(--cyan);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.instagram-link:hover {
+  text-decoration: underline;
+}
+
 footer {
   padding: 18px;
   text-align: center;
