@@ -631,8 +631,8 @@ footer {
   }
 
   .brand img {
-    width: min(188px, 56vw);
-    height: 66px;
+    width: min(260px, 66vw);
+    height: 96px;
   }
 
   .menu-button {
@@ -727,8 +727,8 @@ footer {
   }
 
   .brand img {
-    width: min(164px, 54vw);
-    height: 58px;
+    width: min(230px, 64vw);
+    height: 86px;
   }
 
   h1 {
